@@ -20,6 +20,8 @@ const addItem = () => {
   
   
   const li = document.createElement('li')
+  li.classList.toggle('animate__animated')
+  li.classList.toggle('animate__fadeIn')
    // create a checkbox for each li
    const checkbox = document.
    createElement('input')
