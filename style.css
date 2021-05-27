@@ -1,0 +1,15 @@
+.new {
+  color: blue;
+}
+
+.done {
+  text-decoration: line-through;
+  color: grey;
+  opacity: 0.5;
+}
+ul {
+  list-style: none;
+}
+.li {
+  display: block;
+}
