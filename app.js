@@ -1,7 +1,7 @@
 // add event listener to add button
 const addButton = document.querySelector('#add');
 
-console.log(addButton);
+const showCompleteButton = document.querySelector('#show-completed');
 
 const ul = document.querySelector('#toDo')
   const completed = document.querySelector('#completed')
@@ -9,7 +9,6 @@ const ul = document.querySelector('#toDo')
   const task = document.querySelector('#task')
 
 const clearInput = () => {
-  const task = document.querySelector('#task')
   task.value = '';
 }
 
@@ -51,8 +50,11 @@ checkbox.onchange = () => {
    }
 }
 }
-
+const hideComplete = () => {
+  completed.classList.toggle('hidden')
+}
 addButton.addEventListener('click', addItem)
+showCompleteButton.addEventListener('click', hideComplete)
 
 
 

@@ -1,14 +1,36 @@
+body {
+  background-color: antiquewhite;
+  font-family: 'Indie Flower', cursive;
+}
 .flexcolumn {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
-li, .task, #add {
+h1 {
+  margin: 10px 30px;
+}
+h2 {
+  margin: 30px;
+  border-bottom: 2px solid black;
+}
+li, .task, button {
   font-size: 20px;
+  font-family: 'Indie Flower', cursive;
 }
 .new {
   color: blue;
+}
+
+#task, button {
+  margin: 0 10px;
+  border: 3px solid  darkorange;;
+  padding: 10px;
+}
+button {
+  background-color: darkorange;
+  border-radius: 8%;
 }
 
 .done {
@@ -26,4 +48,20 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hidden {
+  display: none;
+}
+.lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.todotitle {
+  padding: 0 19px;
+}
+span {
+  margin: 0 30px;
+  opacity: 0.5;
 }
