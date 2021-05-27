@@ -54,10 +54,7 @@ checkbox.onchange = () => {
 }
 }
 const hideComplete = () => {
-const children = completed.children;
-for (let i=0; i<children.length; i++) {
-  children[i].classList.toggle('hidden')
-}
+completed.classList.toggle('hidden')
 }
 
 addButton.addEventListener('click', addItem)
