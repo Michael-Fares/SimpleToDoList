@@ -8,6 +8,8 @@ const ul = document.querySelector('#toDo')
 
   const task = document.querySelector('#task')
 
+ 
+
 const clearInput = () => {
   task.value = '';
 }
@@ -18,10 +20,7 @@ const addItem = () => {
   const toDo = document.createTextNode(task.value)
   console.log(toDo)
   
-  
   const li = document.createElement('li')
-  li.classList.toggle('animate__animated')
-  li.classList.toggle('animate__fadeIn')
    // create a checkbox for each li
    const checkbox = document.
    createElement('input')
@@ -39,6 +38,8 @@ if (task.value != '') {
   label.appendChild(toDo)
   li.appendChild(label)
   li.classList.toggle('new')
+  li.classList.toggle('animate__animated')
+     li.classList.toggle('animate__fadeIn')
   // clear the input feild after task is added
   clearInput()
 }
@@ -53,11 +54,20 @@ checkbox.onchange = () => {
 }
 }
 const hideComplete = () => {
-  completed.classList.toggle('hidden')
+const children = completed.children;
+for (let i=0; i<children.length; i++) {
+  children[i].classList.toggle('hidden')
 }
+}
+
 addButton.addEventListener('click', addItem)
 showCompleteButton.addEventListener('click', hideComplete)
 
-
+// allow pressing enter to add a task also
+task.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+ addItem() 
+  }
+})
 
 
