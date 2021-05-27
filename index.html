@@ -2,15 +2,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>SimpleToDoList</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <label for="task">Add Item:</label>
+  <div class="flexrow">
+    <h1>To Do List</h1>
+  </div>
+  <div class="flexrow">
   <input type="text" class="task" id="task"></input>
-  <button id="add">Add</button>
+  <button id="add">Add Item</button>
+</div>
 
-  <ul>
+  <ul id="toDo" class="flexcolumn">
+    <h1>To Do</h1>
+<!-- figure out how to add same event listeners to example items -->
+   <!-- <li class="new"><input type ="checkbox"><label>Wash laundry</label></li> -->
+  </ul> 
+
+  <ul id="completed" class="flexcolumn">
+    <h1>Completed</h1>
    <!-- example items -->
     <!-- <li class="new">asdfasdf</li>
     <li class="done">asdfasdf</li> -->

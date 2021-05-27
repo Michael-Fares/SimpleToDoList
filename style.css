@@ -1,3 +1,12 @@
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+li, .task, #add {
+  font-size: 20px;
+}
 .new {
   color: blue;
 }
@@ -10,6 +19,11 @@
 ul {
   list-style: none;
 }
-.li {
-  display: block;
+.checkbox {
+  margin-right: 10px;
+}
+.flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
