@@ -1,22 +1,22 @@
-// add event listener to add button
+// global variable initializations
 const addButton = document.querySelector('#add');
 
 const showCompleteButton = document.querySelector('#show-completed');
 
 const ul = document.querySelector('#toDo')
-  const completed = document.querySelector('#completed')
 
-  const task = document.querySelector('#task')
+const completed = document.querySelector('#completed')
 
- 
+const task = document.querySelector('#task')
 
+// functions
 const clearInput = () => {
   task.value = '';
 }
 
 
 const addItem = () => {
-  // create a text node of the toDo item
+  // create a text node of the toDo item and point it to the value of the input
   const toDo = document.createTextNode(task.value)
   console.log(toDo)
   
@@ -31,7 +31,7 @@ const addItem = () => {
 
    const label = document.createElement('label')
 
-   // prevent adding empty tasks
+   // prevent adding empty tasks 
 if (task.value != '') {
   ul.appendChild(li)
   li.appendChild(checkbox)
@@ -47,7 +47,8 @@ checkbox.onchange = () => {
 
   li.classList.toggle('done')
    if (checkbox.checked) {
-     completed.appendChild(li)
+     setTimeout(function(){ completed.appendChild(li); }, 1000)
+     li.classList.toggle('animate__fadeIn')
    } else {
      ul.appendChild(li)
    }
@@ -57,6 +58,7 @@ const hideComplete = () => {
 completed.classList.toggle('hidden')
 }
 
+// event listeners 
 addButton.addEventListener('click', addItem)
 showCompleteButton.addEventListener('click', hideComplete)
 
@@ -66,5 +68,6 @@ task.addEventListener('keyup', function(event) {
  addItem() 
   }
 })
+
 
 
